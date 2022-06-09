@@ -1,0 +1,134 @@
+@mixin bc($class, $color) {
+  .#{$class} {
+    background-color: $color;
+  }
+}
+.galerry {
+  background-image: linear-gradient(to bottom, #fff5f6 40%, #fff 60%);
+  min-height: 122px;
+  @media screen and (min-width: 768px) {
+    min-height: 264px;
+  }
+  @media screen and (min-width: 1280px) {
+    min-height: 430px;
+  }
+}
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+  }
+}
+.gallery__box {
+  &:not(:first-child) {
+    margin-left: 2px;
+    @media screen and (min-width: 1280px) {
+      margin-left: 5px;
+    }
+  }
+}
+.gallery__img-box {
+  border-radius: 10px;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+  @media screen and (min-width: 768px) {
+    width: 87px;
+    height: 87px;
+    border-radius: 20px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 140px;
+    height: 140px;
+    border-radius: 35px;
+  }
+}
+
+@include bc(one, rgb(0, 255, 255));
+@include bc(two, rgb(0, 0, 255));
+
+.three {
+  background-color: green;
+  margin-top: 2px;
+  @media screen and (min-width: 1280px) {
+    margin-top: 5px;
+  }
+}
+.four {
+  background-color: red;
+  width: 78px;
+  height: 78px;
+  margin-top: 0;
+  @media screen and (min-width: 768px) {
+    width: 174px;
+    height: 174px;
+  }
+  @media screen and (min-width: 1280px) {
+    width: 280px;
+    height: 280px;
+  }
+}
+.five {
+  background-color: orange;
+  margin-top: 2px;
+  @media screen and (min-width: 1280px) {
+    margin-top: 5px;
+  }
+}
+@include bc(six, rgb(210, 105, 30));
+
+.seven {
+  background-color: tomato;
+  margin-top: 2px;
+  @media screen and (min-width: 1280px) {
+    margin-top: 5px;
+  }
+}
+@include bc(eight, rgb(0, 0, 0));
+
+.nine {
+  background-color: blueviolet;
+  margin-top: 2px;
+  @media screen and (min-width: 1280px) {
+    margin-top: 5px;
+  }
+}
+@include bc(ten, rgb(127, 255, 0));
+
+.tr-one {
+  transform: translateY(5px);
+  @media screen and (min-width: 768px) {
+    transform: translateY(15px);
+  }
+  @media screen and (min-width: 1280px) {
+    transform: translateY(20px);
+  }
+}
+.tr-two {
+  transform: translateY(-5px);
+  @media screen and (min-width: 768px) {
+    transform: translateY(-15px);
+  }
+  @media screen and (min-width: 768px) {
+    transform: translateY(-20px);
+  }
+}
+.tr-three {
+  transform: translateY(3px);
+  @media screen and (min-width: 768px) {
+    transform: translateY(8px);
+  }
+  @media screen and (min-width: 768px) {
+    transform: translateY(12px);
+  }
+}
