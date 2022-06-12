@@ -457,8 +457,10 @@ li {
   visibility: hidden;
 }
 
-.gallery__back:hover {
-  left: 0;
+@media screen and (min-width: 1000px) {
+  .gallery__back:hover {
+    left: 0;
+  }
 }
 
 @media screen and (min-width: 550px) {
@@ -479,8 +481,10 @@ li {
   visibility: hidden;
 }
 
-.gallery__next:hover {
-  right: 0;
+@media screen and (min-width: 1000px) {
+  .gallery__next:hover {
+    right: 0;
+  }
 }
 
 @media screen and (min-width: 550px) {

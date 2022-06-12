@@ -292,8 +292,10 @@ li {
   transform: translateY(-50%);
   cursor: pointer;
   transition: left 500ms ease;
-  &:hover {
-    left: 0;
+  @media screen and (min-width: 1000px) {
+    &:hover {
+      left: 0;
+    }
   }
   visibility: hidden;
   @media screen and (min-width: 550px) {
@@ -307,8 +309,10 @@ li {
   transform: translateY(-50%);
   cursor: pointer;
   transition: right 500ms ease;
-  &:hover {
-    right: 0;
+  @media screen and (min-width: 1000px) {
+    &:hover {
+      right: 0;
+    }
   }
   visibility: hidden;
   @media screen and (min-width: 550px) {
