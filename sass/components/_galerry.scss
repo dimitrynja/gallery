@@ -18,6 +18,18 @@ li {
     background-color: $color;
   }
 }
+.block {
+  height: 1000px;
+  background-color: red;
+}
+.block2 {
+  height: 1000px;
+  background-color: green;
+}
+.block3 {
+  height: 1000px;
+  background-color: blue;
+}
 .galerry {
   background-image: linear-gradient(to bottom, #fff5f6 40%, #fff 60%);
   min-height: 122px;
@@ -186,7 +198,6 @@ li {
 
 .gallery__slide {
   position: fixed;
-  position: absolute;
   left: 0;
   top: 0;
   width: 100%;

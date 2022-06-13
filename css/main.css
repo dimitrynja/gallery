@@ -16,6 +16,21 @@ li {
   list-style: none;
 }
 
+.block {
+  height: 1000px;
+  background-color: red;
+}
+
+.block2 {
+  height: 1000px;
+  background-color: green;
+}
+
+.block3 {
+  height: 1000px;
+  background-color: blue;
+}
+
 .galerry {
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(40%, #fff5f6), color-stop(60%, #fff));
   background-image: linear-gradient(to bottom, #fff5f6 40%, #fff 60%);
@@ -290,7 +305,6 @@ li {
 
 .gallery__slide {
   position: fixed;
-  position: absolute;
   left: 0;
   top: 0;
   width: 100%;

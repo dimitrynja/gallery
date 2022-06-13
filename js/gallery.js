@@ -17,6 +17,10 @@ const img = document.querySelector(".gallery__window").children;
 
 for (let i = 0; i < children.length; i += 1) {
   children[i].addEventListener("click", function () {
+    document.body.style.top = `-${window.scrollY}px`;
+    document.body.style.right = 0;
+    document.body.style.left = 0;
+    document.body.style.position = "fixed";
     bd.classList.toggle("galerry__is-hidden");
     img[i].classList.toggle("gallery__img-visible");
   });
@@ -24,6 +28,9 @@ for (let i = 0; i < children.length; i += 1) {
 
 glClose.addEventListener("click", function () {
   bd.classList.toggle("galerry__is-hidden");
+  const scrollY = document.body.style.top;
+  document.body.style.position = "static";
+  window.scrollTo(0, parseInt(scrollY) * -1);
   for (let i = 0; i < img.length; i += 1) {
     if (img[i].classList.contains("gallery__img-visible")) {
       img[i].classList.toggle("gallery__img-visible");
