@@ -14,7 +14,16 @@ const mbNext = document.querySelector(".gallery__mb-next");
 
 const children = [...one, ...two, ...three, ...four, ...five, ...six];
 const img = document.querySelector(".gallery__window").children;
-
+const btn = document.querySelector(".btn");
+console.log(btn);
+let height =
+  document.querySelector(".galerry").offsetHeight +
+  document.querySelector(".block").offsetHeight +
+  document.querySelector(".btn").offsetHeight;
+console.log(height);
+btn.addEventListener("click", function () {
+  window.scrollTo(0, height);
+});
 for (let i = 0; i < children.length; i += 1) {
   children[i].addEventListener("click", function () {
     document.body.style.top = `-${window.scrollY}px`;
@@ -26,11 +35,25 @@ for (let i = 0; i < children.length; i += 1) {
   });
 }
 
+// glClose.addEventListener("click", function () {
+//   bd.classList.toggle("galerry__is-hidden");
+//   const scrollY = document.body.style.top;
+//   document.body.style.position = "static";
+//   window.scrollTo(0, parseInt(scrollY) * -1);
+//   for (let i = 0; i < img.length; i += 1) {
+//     if (img[i].classList.contains("gallery__img-visible")) {
+//       img[i].classList.toggle("gallery__img-visible");
+//     }
+//   }
+// });
 glClose.addEventListener("click", function () {
-  bd.classList.toggle("galerry__is-hidden");
-  const scrollY = document.body.style.top;
   document.body.style.position = "static";
-  window.scrollTo(0, parseInt(scrollY) * -1);
+  window.scrollTo({
+    top: height,
+    left: 0,
+    behavior: "smooth",
+  });
+  bd.classList.toggle("galerry__is-hidden");
   for (let i = 0; i < img.length; i += 1) {
     if (img[i].classList.contains("gallery__img-visible")) {
       img[i].classList.toggle("gallery__img-visible");
